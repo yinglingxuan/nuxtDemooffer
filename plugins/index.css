@@ -1,0 +1,22 @@
+:root{
+    --white:#fff;
+}
+*{
+    padding: 0;
+    margin: 0;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+.font_color_white{
+    color: var(--white);
+}
+.div_flex_justify_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div_flex_justify_space_between{
+    display: flex;
+    justify-content: space-between;
+}

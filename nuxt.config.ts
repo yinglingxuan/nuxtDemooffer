@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   build: {
     transpile: [/vue-i18n/]
   },
+  
   vite: {
     resolve: {
       alias: {
@@ -23,10 +24,12 @@ export default defineNuxtConfig({
       })
     ]
   },
-  css: ['animate.css/animate.css','@/plugins/hover.css','aos/dist/aos.css'],  //这里使用的wowjs库里面的css，如果需要animate官方的动画，可自行下载、配置
+  
+  css: ['animate.css/animate.css','aos/dist/aos.css','@/plugins/hover.css'],  //这里使用的wowjs库里面的css，如果需要animate官方的动画，可自行下载、配置
   plugins: [
       { src: '@/plugins/wow.js', ssr: false },
-      { src:'@/plugins/vue-kinesis.js'},'@/plugins/vue-kinesis.js','@/plugins/aos.js'
+      { src:'@/plugins/vue-kinesis.js'},'@/plugins/vue-kinesis.js','@/plugins/aos.js',
+      { src: "@/plugins/swiper.ts", ssr: false },
   ],
   icon: {
     serverBundle: {

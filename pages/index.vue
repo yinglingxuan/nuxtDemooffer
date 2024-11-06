@@ -1,7 +1,8 @@
 <template>
   <div v-auto-animate>
     <!-- <HomeIndex></HomeIndex> -->
-     <Home></Home>
+     <!-- <Home></Home> -->
+      <Indexhome></Indexhome>
   </div>
 </template>
 <script  setup>

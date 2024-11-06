@@ -89,7 +89,7 @@
 
 
         </div>
-        
+        <Pensolutions></Pensolutions>
   </template>
 <script setup>
 
@@ -170,13 +170,18 @@ const i = (n, e) => {
   }
 }
 onMounted(() => {
-    $aos().init({
+  $aos().init({
     easing: 'ease-out-back',
-    duration: 1000
+    duration: 1000,
+    useClassNames: false,
   })
   aboutHeight.value = window.screen.height +100;
   console.info('高度',aboutHeight.value)
   window.addEventListener('scroll', doScroll)
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // 可选，平滑滚动效果
+  });
   var n = document.getElementsByClassName("txtwav");
   for (var e = 0, t = n.length; e < t; e++) {
     var a = n[e],
@@ -189,6 +194,7 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', doScroll)
 }) 
+
 </script>
   <style scoped lang="scss">
   @import url("@/plugins/hover.css");

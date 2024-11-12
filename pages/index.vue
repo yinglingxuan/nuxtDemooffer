@@ -2,7 +2,8 @@
   <div v-auto-animate>
     <!-- <HomeIndex></HomeIndex> -->
      <!-- <Home></Home> -->
-      <Indexhome></Indexhome>
+      <!-- <Indexhome></Indexhome> -->
+       <GsapDemo></GsapDemo>
   </div>
 </template>
 <script  setup>

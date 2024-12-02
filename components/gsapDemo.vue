@@ -7,7 +7,7 @@
         <div id="demo"></div>
         <div id="yellow"></div>
     </div>
-   
+    
          
 </template>
 <script setup>
@@ -17,13 +17,13 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { gsap,  } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 onMounted(() => {
-
+    // 
     // gsap.from("#box", {
     //     scrollTrigger: "#logo", // 此行代码表示触发动画的元素，只需要增加该行代码，就可以实现想要的效果。
     //     duration: 2,
     //     scale: 0.3
     // });
-    gsap.registerPlugin(ScrollTrigger) 
+    // gsap.registerPlugin(ScrollTrigger) 
     // gsap.timeline({
     //     scale: 2,
     //     scrollTrigger: {
@@ -53,8 +53,7 @@ onMounted(() => {
     //         }
     //     }
     // });
- 
-
+  
     //滚动效果
     gsap.registerPlugin(ScrollTrigger) 
     gsap.to("#box", {
@@ -98,7 +97,8 @@ onMounted(() => {
         backgroundColor: "yellow",
         borderRadius:'60%',
         x: 1000,  // 移动到对应的坐标
-       
+        yoyo: true, 
+        stagger:1,
         scrollTrigger: {
             
             trigger: "#yellow",
